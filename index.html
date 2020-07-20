@@ -1,55 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
 
-    <script src="https://unpkg.com/thpace"></script>
+    <title>Himal Patel</title>
   </head>
   <body>
-    <nav class="navbar is-primary">
-      <div class="navbar-brand">
-        <a href="#" class="navbar-item">
-          <p>Himal Patel</p>
-        </a>
-
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+    <nav>
+      <div class="logo">
+        <h4>Himal Patel</h4>
       </div>
 
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <a href="#" class="navbar-item"></a>
-        </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
     </nav>
 
-    <script>
-      const canvas = document.querySelector("#hero-background");
-
-      const settings = {
-        //colors: ["#5c26dc", "#250050", "#cf6524"],
-        //colors: ["#581b98", "rgb(65,49,66)", "#fb4d46"],
-        colors: ["#6600cc", "rgb(65,49,66)", "#fb4d46"],
-        //colors: ["#6600cc", "#1b151b", "#6600cc"],
-        triangleSize: 50
-      };
-
-      Thpace.create(canvas, settings);
-    </script>
+    <header class="hero">
+      <div class="hero-content">
+        <h2>Hi, I'm Himal Patel</h2>
+        <p>Computer Science Student.</p>
+      </div>
+    </header>
   </body>
 </html>
