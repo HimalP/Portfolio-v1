@@ -1,194 +1,204 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 8vh;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  background-color: transparent;
-  position: fixed;
-  z-index: 99;
-  padding: 0 10rem;
-}
-
-.logo {
-  color: rgb(226, 226, 226);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
-}
-
-.nav-links {
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
-}
-
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links a {
-  color: rgb(226, 226, 226);
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.burger {
-  display: none;
-  cursor: pointer;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(226, 226, 226);
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 1024px) {
-  .nav-links {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-links {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: #5d4954;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-  }
-
-  .nav-links li {
-    opacity: 0;
-  }
-
-  .burger {
-    display: block;
-  }
-
-  #hero-image {
-    display: none;
-  }
-
-  nav {
-    padding: 0 2rem;
-  }
-
-  header {
+*{
+    margin: 0;
     padding: 0;
-  }
+    box-sizing: border-box;
 }
 
-.nav-active {
-  transform: translateX(0%);
+body{
+    height: 200vh;
 }
 
-@keyframes navLinkFade {
-  from {
+nav, header, section{
+    padding: 0 12rem;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    position: fixed;
+    z-index: 99;
+}
+
+.logo{
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+
+/* Burger */
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Header */
+header{
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+    background: #8e2de2;
+    background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, #8e2de2, #4a00e0); 
+}
+
+.hero-content{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-text h1{
+    font-size: 42px;
+}
+
+.hero-text p{
+    font-size: 18px;
+}
+
+#hero-image{
+    position: absolute;
+    left: 50vw;
+    top: 12vw;
+    width: 42vw;
+}
+
+/* Social Banner */
+.social-banners{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-banners img{
+    opacity: 50%;
+}
+
+.social-banners a:first-of-type img{
+    height: 10vh;
+}
+
+.social-banners a:last-of-type img{
+    height: 16vh;
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+
+    header, nav, section{
+        padding: 0 1rem;
+    }
+
+    header{
+        height: 100vh;
+        clip-path: none;
+    }
+
+    #hero-image{
+        display: none;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5c22cf;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        justify-content: space-around;
+    }
+
+    .nav-links li{
+        opacity: 0%;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .hero-text{
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 36px;
+    }
+
+    .social-banners{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
     opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }
 
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
-header {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  background: linear-gradient(45deg, #8614ce, #ff0057);
-  padding: 0 10rem;
-}
-header:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background: #fff;
-  clip-path: polygon(100% 30%, 100% 100%, 0% 105%);
-}
-
-.hero-content {
-  position: relative;
-  color: white;
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 6rem;
-}
-
-.hero-text h2 {
-  font-size: 64px;
-}
-
-.hero-text p {
-  font-size: 24px;
-}
-
-.hero-text button {
-  background-color: transparent;
-  border: 2px solid black;
-  padding: 0.5rem;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 2rem;
-}
-
-#hero-image {
-  width: 500px;
-  height: 500px;
-  position: relative;
-  top: 3rem;
-}
-
-section {
-  margin: 5rem 10rem;
-}
-
-.skill-bubble {
-  width: 100px;
-  height: 100px;
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
