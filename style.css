@@ -6,6 +6,7 @@
 }
 
 body {
+  overflow-x: hidden;
   height: 200vh;
 }
 
@@ -15,22 +16,40 @@ section {
   padding: 0 12rem;
 }
 
+.section-title {
+  font-size: 56px;
+  font-weight: 900;
+  width: fit-content;
+  border-bottom: 10px solid blueviolet;
+  margin: 1.5em 0 0.5em 0;
+  letter-spacing: 3px;
+}
+
+.is-solid {
+  background: #6c00c4;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.267);
+}
+
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  height: 8vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
   color: white;
   position: fixed;
   z-index: 99;
+  background: transparent;
+  box-shadow: none;
+  transition: box-shadow 400ms linear;
+  transition: background 400ms linear;
 }
 
 .logo {
   letter-spacing: 5px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .nav-links {
@@ -65,26 +84,56 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Hero Header */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Header */
 header {
-  height: 80vh;
-  clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
-  background: #8e2de2;
+  background: #6c00c4;
   background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
   background: linear-gradient(to right, #8e2de2, #4a00e0);
+  height: 80vh;
+  padding-top: 8vh;
+}
+
+header:after {
+  content: "";
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  clip-path: polygon(0 100%, 100% 45%, 100% 100%, 0% 100%);
+  width: 100%;
+  background: white;
 }
 
 .hero-content {
-  height: 90%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .hero-text {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
   color: white;
+}
+
+.hero-content img {
+  height: 28vw;
+  position: relative;
+  top: 7em;
+  z-index: 1;
 }
 
 .hero-text h1 {
@@ -93,60 +142,61 @@ header {
 
 .hero-text p {
   font-size: 24px;
+  font-weight: bold;
 }
 
-#hero-image {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 40%;
-  z-index: 99;
-}
+/* Social Links */
 
-/* Social Banner */
-.social-banners {
+.social-links {
+  height: 20vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.social-banners img {
-  opacity: 50%;
+.social-links a {
+  height: 65%;
 }
 
-.social-banners a:first-of-type img {
-  height: 10vh;
+.social-links img {
+  height: 100%;
+  opacity: 60%;
+  transition: opacity 500ms;
 }
 
-.social-banners a:last-of-type img {
-  height: 16vh;
+.social-links img:hover {
+  opacity: 100%;
+}
+
+.social-icon {
+  display: none;
 }
 
 /* Skills */
-.skills h1 {
-  font-size: 48px;
+.skill-heading {
+  text-align: center;
+  font-size: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 1em 0 5em 0;
+}
 
-  header,
+.skills img {
+  height: 7em;
+}
+
+@media only screen and (max-width: 768px) {
   nav,
+  header,
   section {
     padding: 0 1rem;
   }
 
-  header {
-    height: 100vh;
-    clip-path: none;
-  }
-
-  #hero-image {
-    display: none;
-  }
-
+  /* Navbar */
   .nav-links {
     position: absolute;
     right: 0px;
@@ -161,27 +211,58 @@ header {
     transition: transform 0.5s ease-in;
     justify-content: space-around;
   }
-
   .nav-links li {
     opacity: 0%;
   }
-
   .burger {
     display: block;
   }
 
+  /* Header */
+  header {
+    height: 100vh;
+  }
+
+  header:after {
+    display: none;
+  }
+
   .hero-content {
     justify-content: center;
+  }
+
+  .hero-text {
     text-align: center;
   }
 
   .hero-text h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
-  .social-banners {
-    flex-direction: column;
-    margin-top: 1rem;
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  header img {
+    display: none;
+  }
+
+  /* Social Links */
+  .social-links {
+    position: absolute;
+    justify-content: space-between;
+    width: 34vw;
+    height: 8vh;
+    top: 92vh;
+    left: calc(50% - 17vw);
+  }
+
+  .social-banner {
+    display: none;
+  }
+
+  .social-icon {
+    display: inline;
   }
 }
 
@@ -189,18 +270,7 @@ header {
   transform: translateX(0%);
 }
 
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
+/* Animations */
 @keyframes navLinkFade {
   from {
     opacity: 0;
