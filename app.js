@@ -23,7 +23,7 @@ const navBackground = () => {
   const nav = document.getElementsByTagName("nav")[0];
 
   window.addEventListener("scroll", () => {
-    this.scrollY > 600
+    this.scrollY > 200
       ? nav.classList.add("is-solid")
       : nav.classList.remove("is-solid");
   });
@@ -31,3 +31,4 @@ const navBackground = () => {
 
 navSlide();
 navBackground();
+navScroll();
