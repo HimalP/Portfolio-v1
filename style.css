@@ -72,8 +72,13 @@ nav {
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   color: white;
+  transition: color 400ms;
+}
+
+.nav-links a:hover {
+  color: #000000;
 }
 
 /* Burger */
@@ -151,6 +156,19 @@ header:after {
   font-weight: bold;
 }
 
+.hero-text button {
+  background: transparent;
+  outline: none;
+  border: 3px solid;
+  border-image-source: linear-gradient(85deg, #fe8c00, #f83600);
+  border-image-slice: 1;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 2rem;
+  color: white;
+}
+
 /* Social Links */
 
 .social-links {
@@ -197,8 +215,8 @@ header:after {
   height: 8rem;
 }
 
-#express-icon {
-  height: 4rem;
+.alt-skill-icon {
+  height: 4rem !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -293,8 +311,9 @@ header:after {
   .skill-icons img {
     height: 5.5rem;
   }
-  #express-icon {
-    height: 1.5rem;
+
+  .alt-skill-icon {
+    height: 1.75rem !important;
   }
 }
 

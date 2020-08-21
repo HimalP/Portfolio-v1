@@ -31,4 +31,3 @@ const navBackground = () => {
 
 navSlide();
 navBackground();
-navScroll();
