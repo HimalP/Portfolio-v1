@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #7510f7;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,14 +30,8 @@ section {
   font-size: 56px;
   font-weight: 900;
   width: fit-content;
-  border-bottom: 10px solid blueviolet;
   margin: 0em 0 0.5em 0;
   letter-spacing: 3px;
-}
-
-.is-solid {
-  background: #6c00c4;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.267);
 }
 
 /* Navbar */
@@ -51,6 +49,11 @@ nav {
   box-shadow: none;
   transition: box-shadow 400ms linear;
   transition: background 400ms linear;
+}
+
+.is-solid {
+  background: var(--primary-color);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.267);
 }
 
 .logo {
@@ -109,7 +112,7 @@ nav {
 
 /* Header */
 header {
-  background: #6c00c4;
+  background: var(--primary-color);
   background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   height: 80vh;
@@ -162,11 +165,12 @@ header:after {
   border: 3px solid;
   border-image-source: linear-gradient(85deg, #fe8c00, #f83600);
   border-image-slice: 1;
-  padding: 10px;
+  padding: 8px;
   font-weight: bold;
-  font-size: 24px;
-  margin-top: 2rem;
+  font-size: 20px;
+  margin-top: 1rem;
   color: white;
+  cursor: pointer;
 }
 
 /* Social Links */
@@ -196,6 +200,12 @@ header:after {
   display: none;
 }
 
+/* About */
+#about img {
+  transform: scaleX(-1);
+  width: 30%;
+}
+
 /* Skills */
 .skill-heading {
   text-align: center;
@@ -207,16 +217,77 @@ header:after {
   grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
   justify-items: center;
   align-items: center;
+  width: 75%;
   row-gap: 2em;
-  margin: 1em 0 5em 0;
+  margin: 1em auto 5em auto;
 }
 
 .skill-icons img {
-  height: 8rem;
+  height: 6rem;
 }
 
 .alt-skill-icon {
-  height: 4rem !important;
+  height: 3rem !important;
+}
+
+/* Portfolio */
+#portfolio {
+  background: var(--primary-color);
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#portfolio h1 {
+  color: white;
+  margin: 0;
+}
+
+#portfolio > p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5rem;
+  text-align: center;
+  width: 50%;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  justify-items: center;
+  width: 80%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.75em;
+  padding: 60px 35px;
+  border-radius: 12px;
+  text-align: center;
+  background: white;
+  box-shadow: 6px 8px rgba(0, 0, 0, 0.336);
+  width: 20vw;
+}
+
+.project-card img {
+  margin-bottom: 2rem;
+  height: 2.5vw;
+}
+
+.project-card p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+
+.project-card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -305,15 +376,41 @@ header:after {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     justify-items: center;
     row-gap: 2em;
-    margin: 1em 0 2em 0;
+    margin: 1em auto 2em auto;
+    width: 100%;
   }
 
   .skill-icons img {
-    height: 5.5rem;
+    height: 5rem;
   }
 
   .alt-skill-icon {
     height: 1.75rem !important;
+  }
+
+  /* Portfolio */
+  #portfolio {
+    padding: 4rem 1rem;
+  }
+
+  #portfolio > p {
+    margin-bottom: 2rem;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .projects-list {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card img {
+    height: 10vw;
   }
 }
 
