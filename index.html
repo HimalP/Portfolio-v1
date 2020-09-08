@@ -24,6 +24,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -102,10 +104,42 @@
       </a>
     </section>
 
-    <section id="about">
+    <section id="about" class="has-gradient">
       <h1 class="section-title">About Me</h1>
+      <img src="./assets/avatar.png" />
+      <h4>Himal Patel</h4>
+
       <div>
-        <img src="./assets/avatar.png" />
+        <ul>
+          <li>
+            <span> <i data-feather="calendar"></i> </span>
+            &nbsp; &nbsp; November 25, 2000
+          </li>
+
+          <li>
+            <span> <i data-feather="map-pin"></i> </span>
+            &nbsp; &nbsp; Toronto, Canada
+          </li>
+
+          <li>
+            <span> <i data-feather="briefcase"></i> </span>
+            &nbsp; &nbsp; Developer/Programmer/Tester @ MCCSS
+          </li>
+        </ul>
+        <p>
+          Hi there! I'm a Fullstack Developer to-be and Computer Science Student
+          at Ryerson University. I began coding during my early teens which
+          turned into a hobby I enjoyed.
+          <br /><br />
+          I have self-taught myself multiple languages starting with Java and
+          then moving onto the fullstack development path by learning HTML, CSS,
+          and Javascript.
+          <br /><br />
+          I have now moved on to learning more advanced tools and frameworks
+          such as the MEVN stack, test automation, devops, and more! My passion
+          for fullstack development will never end as I continue to grow my
+          skills.
+        </p>
       </div>
     </section>
 
@@ -158,7 +192,7 @@
       </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="has-gradient">
       <h1 class="section-title">My Portfolio</h1>
       <p>
         Learning to code and work with new technologies and devtools requires
@@ -191,5 +225,9 @@
     <section id="contact">
       <h1 class="section-title">Contact</h1>
     </section>
+
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

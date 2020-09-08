@@ -29,9 +29,15 @@ section {
 .section-title {
   font-size: 56px;
   font-weight: 900;
-  width: fit-content;
+  text-align: center;
   margin: 0em 0 0.5em 0;
   letter-spacing: 3px;
+}
+
+.has-gradient {
+  background: var(--primary-color);
+  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
 /* Navbar */
@@ -201,12 +207,58 @@ header:after {
 }
 
 /* About */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+
+#about h1 {
+  margin: 0;
+}
+
+#about h4 {
+  font-size: 36px;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+
 #about img {
-  transform: scaleX(-1);
-  width: 30%;
+  border-radius: 50%;
+  height: 250px;
+  border: 3px solid black;
+  margin-top: 2rem;
+}
+
+#about ul {
+  list-style: none;
+  min-width: 40%;
+}
+
+#about ul li {
+  display: flex;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#about div {
+  display: flex;
+  justify-content: center;
+}
+
+#about p {
+  width: 50%;
 }
 
 /* Skills */
+#skills {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .skill-heading {
   text-align: center;
   font-size: 30px;
@@ -232,8 +284,7 @@ header:after {
 
 /* Portfolio */
 #portfolio {
-  background: var(--primary-color);
-  padding-top: 10rem;
+  padding-top: 8rem;
   padding-bottom: 8rem;
   display: flex;
   flex-direction: column;
@@ -368,6 +419,31 @@ header:after {
 
   .social-icon {
     display: inline;
+  }
+
+  /* About */
+  #about {
+    padding-top: 2rem;
+  }
+  #about h4 {
+    margin-bottom: 0;
+    font-size: 28px;
+  }
+
+  #about div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #about ul {
+    margin-bottom: 4rem;
+    font-size: 14px;
+  }
+
+  #about p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
   }
 
   /* Skills */
