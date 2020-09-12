@@ -24,8 +24,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -104,7 +102,7 @@
       </a>
     </section>
 
-    <section id="about" class="has-gradient">
+    <section id="about">
       <h1 class="section-title">About Me</h1>
       <img src="./assets/avatar.png" />
       <h4>Himal Patel</h4>
@@ -112,18 +110,18 @@
       <div>
         <ul>
           <li>
-            <span> <i data-feather="calendar"></i> </span>
-            &nbsp; &nbsp; November 25, 2000
+            <span> <i class="far fa-calendar"></i> </span>
+            &nbsp; &nbsp; February 18, 2000
           </li>
 
           <li>
-            <span> <i data-feather="map-pin"></i> </span>
+            <span> <i class="fas fa-map-marker-alt"></i> </span>
             &nbsp; &nbsp; Toronto, Canada
           </li>
 
           <li>
-            <span> <i data-feather="briefcase"></i> </span>
-            &nbsp; &nbsp; Developer/Programmer/Tester @ MCCSS
+            <span> <i class="fas fa-briefcase"></i> </span>
+            &nbsp; &nbsp; Developer/Tester @ MCCSS
           </li>
         </ul>
         <p>
@@ -137,8 +135,7 @@
           <br /><br />
           I have now moved on to learning more advanced tools and frameworks
           such as the MEVN stack, test automation, devops, and more! My passion
-          for fullstack development will never end as I continue to grow my
-          skills.
+          for fullstack development continues to grow as I improve my skills.
         </p>
       </div>
     </section>
@@ -192,7 +189,7 @@
       </div>
     </section>
 
-    <section id="portfolio" class="has-gradient">
+    <section id="portfolio">
       <h1 class="section-title">My Portfolio</h1>
       <p>
         Learning to code and work with new technologies and devtools requires
@@ -223,11 +220,28 @@
     </section>
 
     <section id="contact">
-      <h1 class="section-title">Contact</h1>
+      <h1 class="section-title">Contact Me</h1>
+
+      <form action="POST" data-netlify="true">
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea
+          name="message"
+          id="form-message"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <div data-netlify-recaptcha="true"></div>
+      </form>
     </section>
 
-    <script>
-      feather.replace();
-    </script>
+    <footer>
+      <div>
+        <a href=""><i class="fab fa-linkedin"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+        <a href=""><i class="fas fa-file-alt"></i></a>
+        <a href=""><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
   </body>
 </html>

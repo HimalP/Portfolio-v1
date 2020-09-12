@@ -34,12 +34,6 @@ section {
   letter-spacing: 3px;
 }
 
-.has-gradient {
-  background: var(--primary-color);
-  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
-}
-
 /* Navbar */
 nav {
   display: flex;
@@ -211,9 +205,13 @@ header:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
   padding-top: 6rem;
   padding-bottom: 8rem;
+  margin-top: 5rem;
+  background: var(--primary-color);
+  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: white;
 }
 
 #about h1 {
@@ -276,6 +274,7 @@ header:after {
 
 .skill-icons img {
   height: 6rem;
+  margin-bottom: 1rem;
 }
 
 .alt-skill-icon {
@@ -290,6 +289,9 @@ header:after {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background: var(--primary-color);
+  background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
 #portfolio h1 {
@@ -339,6 +341,24 @@ header:after {
   text-decoration: none;
   font-weight: bold;
   color: var(--primary-color);
+}
+
+/* Contact */
+#contact {
+  margin-top: 8rem;
+}
+
+/* Footer */
+footer div {
+  display: flex;
+  width: 25%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer a {
+  font-size: 42px;
+  color: white;
 }
 
 @media only screen and (max-width: 768px) {
@@ -423,10 +443,13 @@ header:after {
 
   /* About */
   #about {
-    padding-top: 2rem;
+    color: black;
+    background: transparent;
+    margin-top: 8rem;
   }
+
   #about h4 {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     font-size: 28px;
   }
 
@@ -435,9 +458,16 @@ header:after {
     width: 100%;
   }
 
+  #about img {
+    border: none;
+  }
+
   #about ul {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #about p {
