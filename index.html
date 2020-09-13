@@ -70,7 +70,7 @@
           <h1>Hi, I'm Himal Patel.</h1>
           <p>Computer Science Student.</p>
           <p>Fullstack Developer.</p>
-          <button>About Me</button>
+          <button><a href="#about">About Me</a></button>
         </div>
 
         <img src="./assets/hero-image.png" />
@@ -205,7 +205,9 @@
             An elegant instant messaging platform for those wanting to connect
             with friends & family.
           </p>
-          <a href=""><i class="fas fa-code"></i> Check out the code.</a>
+          <a href="https://github.com/HimalP/Embyr-Chat" target="_blank"
+            ><i class="fas fa-code"></i> Check out the code.</a
+          >
         </div>
 
         <div class="project-card">
@@ -214,34 +216,57 @@
             Simple and stylish web app to get realtime weather info while using
             a built-in todo list.
           </p>
-          <a href=""><i class="fas fa-code"></i> Check out the code.</a>
+          <a href="https://github.com/HimalP/Weather-Todo" target="_blank"
+            ><i class="fas fa-code"></i> Check out the code.</a
+          >
         </div>
       </div>
     </section>
 
     <section id="contact">
       <h1 class="section-title">Contact Me</h1>
+      <p>Have a question or want to connect?</p>
 
-      <form action="POST" data-netlify="true">
-        <input type="text" name="name" />
-        <input type="email" name="email" />
+      <form id="contact-form" action="POST" data-netlify="true">
+        <input type="text" name="name" placeholder="Your Name" />
+        <input type="email" name="email" placeholder="Your Email*" required />
         <textarea
           name="message"
+          placeholder="Message*"
+          required
           id="form-message"
           cols="30"
           rows="10"
         ></textarea>
-        <div data-netlify-recaptcha="true"></div>
+        <input type="submit" value="Send" id="contact-form-submit" />
       </form>
     </section>
 
     <footer>
       <div>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-        <a href=""><i class="fas fa-file-alt"></i></a>
-        <a href=""><i class="fas fa-envelope"></i></a>
+        <span>
+          <a href="https://www.linkedin.com/in/himalpatel9/" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </span>
+        <span>
+          <a href="https://github.com/himalp" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </span>
+        <span>
+          <a href="./assets/Resume.pdf" target="_blank"
+            ><i class="fas fa-file-alt"></i
+          ></a>
+        </span>
+        <span>
+          <a href="mailto:himalhpatel@gmail.com" target="_blank"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </span>
       </div>
+
+      <h1 class="logo">HIMAL PATEL</h1>
     </footer>
   </body>
 </html>
