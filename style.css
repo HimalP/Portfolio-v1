@@ -597,6 +597,14 @@ footer a:hover {
     width: 100%;
   }
 
+  #contact-form-submit {
+    width: 25%;
+    border-radius: 0;
+    background: white;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
   /* Footer */
   footer div {
     width: 100%;
