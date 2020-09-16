@@ -600,6 +600,7 @@ footer a:hover {
   #contact-form-submit {
     width: 25%;
     border-radius: 0;
+    appearance: none;
     background: white;
     align-self: flex-end;
     cursor: pointer;
