@@ -598,12 +598,9 @@ footer a:hover {
   }
 
   #contact-form-submit {
-    width: 25%;
+    background-color: transparent;
+    -webkit-appearance: none;
     border-radius: 0;
-    appearance: none;
-    background: white;
-    align-self: flex-end;
-    cursor: pointer;
   }
 
   /* Footer */
