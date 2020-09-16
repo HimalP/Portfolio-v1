@@ -381,6 +381,7 @@ header:after {
 
 #contact-form-submit {
   width: 25%;
+  min-height: 3rem;
   align-self: flex-end;
   cursor: pointer;
 }
