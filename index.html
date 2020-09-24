@@ -29,6 +29,10 @@
       gtag("config", "UA-175961627-1");
     </script>
 
+    <!-- AOS.js -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script
       src="https://kit.fontawesome.com/52ec1b5820.js"
       crossorigin="anonymous"
@@ -89,6 +93,9 @@
 
     <section class="social-links">
       <a
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="100"
         href="https://www.linkedin.com/in/himalpatel9/"
         target="_blank"
         class="social-banner"
@@ -96,7 +103,14 @@
         <img src="./assets/linkedin-banner.png" />
       </a>
 
-      <a href="https://github.com/himalp" target="_blank" class="social-banner">
+      <a
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="100"
+        href="https://github.com/himalp"
+        target="_blank"
+        class="social-banner"
+      >
         <img src="./assets/github-banner.png" />
       </a>
 
@@ -114,11 +128,11 @@
 
     <section id="about">
       <h1 class="section-title">About Me</h1>
-      <img src="./assets/avatar.png" />
-      <h4>Himal Patel</h4>
+      <img data-aos="zoom-in" data-aos-duration="1000" src="./assets/avatar.png" />
+      <h4 data-aos="zoom-in" data-aos-duration="1000">Himal Patel</h4>
 
       <div>
-        <ul>
+        <ul  data-aos="flip-up" data-aos-duration="1000">
           <li>
             <span> <i class="far fa-calendar"></i> </span>
             &nbsp; &nbsp; February 18, 2000
@@ -134,7 +148,7 @@
             &nbsp; &nbsp; Developer/Tester @ MCCSS
           </li>
         </ul>
-        <p>
+        <p  data-aos="flip-right" data-aos-duration="1000">
           Hi there! I'm a Fullstack Developer to-be and Computer Science Student
           at Ryerson University. I began coding during my early teens which
           turned into a hobby I enjoyed.
@@ -154,7 +168,8 @@
       <h1 class="section-title">Skills</h1>
 
       <h1 class="skill-heading">LANGUAGES</h1>
-      <div class="skill-icons">
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500" class="skill-icons">
         <img src="./assets/skill-icons/js.png" />
         <img src="./assets/skill-icons/html.png" />
         <img src="./assets/skill-icons/css.png" />
@@ -164,7 +179,9 @@
 
       <div>
         <h1 class="skill-heading">FRONTEND</h1>
-        <div class="skill-icons">
+      <div data-aos="flip-right" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500" class="skill-icons">
+        <div  class="skill-icons">
           <img src="./assets/skill-icons/vue.png" />
           <img src="./assets/skill-icons/electron.png" />
           <img src="./assets/skill-icons/jquery.png" />
@@ -174,7 +191,9 @@
 
       <div>
         <h1 class="skill-heading">SERVER</h1>
-        <div class="skill-icons">
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500" class="skill-icons">
+        <div  class="skill-icons">
           <img src="./assets/skill-icons/node.png" />
           <img class="alt-skill-icon" src="./assets/skill-icons/express.png" />
         </div>
@@ -182,7 +201,9 @@
 
       <div>
         <h1 class="skill-heading">DATABASE</h1>
-        <div class="skill-icons">
+      <div data-aos="flip-right" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500" class="skill-icons">
+        <div  class="skill-icons">
           <img src="./assets/skill-icons/mongodb.png" />
           <img src="./assets/skill-icons/postgresql.png" />
         </div>
@@ -190,7 +211,9 @@
 
       <div>
         <h1 class="skill-heading">OTHER DEVTOOLS</h1>
-        <div class="skill-icons">
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500" class="skill-icons">
+        <div  class="skill-icons">
           <img src="./assets/skill-icons/github.png" />
           <img src="./assets/skill-icons/figma.png" />
           <img src="./assets/skill-icons/vscode.png" />
@@ -209,7 +232,7 @@
       </p>
 
       <div class="projects-list">
-        <div class="project-card">
+        <div class="project-card" data-aos="flip-down" data-aos-duration="1000">
           <img src="./assets/project-bg/embyr.png" />
           <p>
             An elegant instant messaging platform for those wanting to connect
@@ -220,7 +243,7 @@
           >
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-aos="flip-down" data-aos-duration="1000">
           <img src="./assets/project-bg/weather-todo.png" />
           <p>
             Simple and stylish web app to get realtime weather info while using
@@ -278,5 +301,9 @@
 
       <h1 class="logo">HIMAL PATEL</h1>
     </footer>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
